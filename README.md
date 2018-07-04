@@ -9,7 +9,7 @@ Install using NPM:
 
 To add the functionality of this plugin you should make a custom build of the editor. Follow the instructions [here](https://docs.ckeditor.com/ckeditor5/latest/builds/guides/development/installing-plugins.html).
 
-To load the plugin, configure ckedigit adtor build-config.js like this:
+To load the plugin, configure ckeditor `build-config.js` like this:
 ```
     module.exports = {
 	// The editor creator to use, assuming ClassicEditor.
