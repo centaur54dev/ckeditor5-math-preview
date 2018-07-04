@@ -1,0 +1,38 @@
+/*
+ * Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
+ * For licensing, see LICENSE.md.
+ */
+ 
+.ck.ck-mathpreview-popup{
+  min-width: 180px;
+}
+.ck .ck-horizontal-panel{
+  overflow:hidden;
+  text-align:center;
+}
+
+.ck .ck-radio-group {
+  clear: none;
+}
+
+.ck-radio-group .ck-label {
+  float: left;
+  clear: none;
+  display: block;
+  padding: 2px 0.5em 0 1em;
+}
+
+.ck-radio-group .ck-input-radio {
+  float: left;
+  clear: none;
+  margin: 0.5em 0 0 0;
+}
+
+.ck .ck-latex-render{
+  padding:1em;
+}
+
+
+*[class^="MathJax"] * {
+  vertical-align:unset!important;
+}
