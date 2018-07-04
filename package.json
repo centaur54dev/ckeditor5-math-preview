@@ -8,6 +8,12 @@
     "type": "git",
     "url": "git+https://github.com/centaur54dev/ckeditor5-math-preview"
   },
+  "dependencies" :
+    { 
+      "@ckeditor/ckeditor5-core": "^10.1.0",
+      "@ckeditor/ckeditor5-engine": "^10.1.0",
+      "@ckeditor/ckeditor5-ui": "^10.1.0"
+    },
   "keywords": [
     "ckeditor5",
     "latex",
