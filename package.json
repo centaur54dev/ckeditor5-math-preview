@@ -3,7 +3,7 @@
   "version": "0.1.1",
   "description": "When clicking on a latex math expression, a popup is shown that displays the expression rendered with MathJax ",
   "main": "mathpreview.js",
-  "homepage": "https://github.com/pourquoi/centaur54dev/ckeditor5-math-preview#readme",
+  "homepage": "https://github.com/centaur54dev/ckeditor5-math-preview#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/centaur54dev/ckeditor5-math-preview"
