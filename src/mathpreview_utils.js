@@ -1,4 +1,3 @@
-import ViewPosition 	from '@ckeditor/ckeditor5-engine/src/view/position';
 import TreeWalker 		from '@ckeditor/ckeditor5-engine/src/view/treewalker';
 import ViewRange 			from '@ckeditor/ckeditor5-engine/src/view/range';
 import MathPreviewConfig 	from './mathpreview_config';
@@ -53,11 +52,11 @@ export function findMarkPos(view, position, marks, forward){
 					closer = closer || earlierIndex<0;
 					if (closer) {
 						if (forward){
-							data.pos      = ViewPosition.createAt(item,'before').getShiftedBy(mindex)
+							data.pos      = view.createPositionAt(item,'before').getShiftedBy(mindex)
 							data.markPos  = data.pos.getShiftedBy(2);
 						}
 						else{
-							data.markPos  = ViewPosition.createAt(item,'before').getShiftedBy(mindex)
+							data.markPos  = view.createPositionAt(item,'before').getShiftedBy(mindex)
 							data.pos  	  = data.markPos.getShiftedBy(2);
 						}
 						data.mark  = i;
