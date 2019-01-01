@@ -11,29 +11,35 @@ Install using NPM:
 
 To add the functionality of this plugin you should make a custom build of the editor. Follow the instructions [here](https://docs.ckeditor.com/ckeditor5/latest/builds/guides/development/installing-plugins.html).
 
-To load the plugin, configure ckeditor `build-config.js` like this:
+
+To load the plugin, configure ckeditor (e.g. edit file `ckeditor.js`) like this:
+
+#### Import plugin
 ```
-    module.exports = {
-	// The editor creator to use, assuming ClassicEditor.
-	editor: '@ckeditor/ckeditor5-editor-classic/src/classiceditor',
-
-	// The name under which the editor will be exported.
-	moduleName: 'ClassicEditor',
+import CustomElement from 'ckeditor5-math-preview/src/mathpreview';
+```
 
 
-	plugins: [
-                ...
-                'ckeditor5-math-preview/src/mathpreview',
-                ...
-	         ],
+#### Configure plugin
+Assuming that the build is based on Classic Editor:
 
-	config: {
+```
+export default class ClassicEditor extends ClassicEditorBase {}
+
+	// Plugins to include in the build.
+	ClassicEditor.builtinPlugins = [
+		...
+		MathpreviewPlugin,
+		...
+	],
+
+	ClassicEditor.defaultConfig = {
 		toolbar: {
 			items: [
-                    ...
-                    'mathpreview',
-                    ...
-			       ]
+				...
+				'mathpreview',
+				...
+			    ]
 		},
 
         ...OTHER OPTIONS
