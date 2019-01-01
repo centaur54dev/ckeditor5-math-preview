@@ -24,10 +24,13 @@ export default class MathPreviewhUI extends Plugin {
 
 	init() {
 		const editor = this.editor;
+		const config = editor.config.get(( 'MathPreview' ))
+		const engine = this._safeGet(config.engine, 'mathjax');
+
 
 		editor.editing.view.addObserver( ClickObserver );
 
-		this.popupView = this._createPopupView();
+		this.popupView = this._createPopupView(engine);
 
 		this._balloon = editor.plugins.get( ContextualBalloon );
 
@@ -40,9 +43,9 @@ export default class MathPreviewhUI extends Plugin {
 
 
 
-	_createPopupView() {
+	_createPopupView(engine) {
 		const editor = this.editor;
-		const popupView    = new MathPreviewPopupView( editor.locale );
+		const popupView    = new MathPreviewPopupView( engine,  editor.locale );
 	
 		popupView.keystrokes.set( 'Esc', ( data, cancel ) => {
 			this._hideUI();
@@ -197,6 +200,16 @@ export default class MathPreviewhUI extends Plugin {
 			return Utils.getMath( selection.getFirstPosition(), this.editor.editing.view );
 		} else {
 			return {valid:false};
+		}
+	}
+
+
+	safeGet(input, safeDefault){
+		if( typeof input !== 'undefined' &&  (input || input===false || input===0) ){
+			return input;
+		}
+		else{
+			return safeDefault;
 		}
 	}
 }

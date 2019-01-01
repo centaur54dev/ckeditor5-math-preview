@@ -4,10 +4,10 @@ import          '../theme/customui.css';
 
 export default class LatexRenderView extends View {
 
-	constructor( locale ) {
+	constructor( engine, locale ) {
 		super( locale );
 
-
+		this.engine = engine;
 		this.set( 'value', "" );
 		this.set( 'mode',  "");
 		this.on( 'change:value', ( evt, name, value ) => {
@@ -31,10 +31,18 @@ export default class LatexRenderView extends View {
 	}
 
 	updateMath(){
-		if(this.mode==="inline") this.element.innerHTML = "\\(" + this.value + "\\)";
-		else 					 this.element.innerHTML = "\\[" + this.value + "\\]";
-		MathJax.Hub.Queue(['Typeset', MathJax.Hub, this.element], function () {
-		});
+		if (engine=='mathjax'){
+			if(this.mode==="inline") this.element.innerHTML = "\\(" + this.value + "\\)";
+			else 					 this.element.innerHTML = "\\[" + this.value + "\\]";
+			MathJax.Hub.Queue(['Typeset', MathJax.Hub, this.element], function () {
+			});
+		}
+		else if (engine=='katex'){
+			katex.render(this.value, this.element, {
+				displayMode: this.mode==='display',
+				throwOnError: false
+			});
+		}
 	}
 
 	render() {

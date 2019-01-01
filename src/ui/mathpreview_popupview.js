@@ -23,11 +23,10 @@ import '../../theme/mathpreview.css';
 export default class MathPreviewPopupView extends View {
 
 	
-	constructor( locale ) {
+	constructor( engine, locale ) {
 		super( locale );
 
 		const t = locale.t;
-
 		this.math         = new Utils.MathObject();
 		
 		this.focusTracker = new FocusTracker();  //Tracks information about DOM focus in the form.
@@ -35,7 +34,7 @@ export default class MathPreviewPopupView extends View {
 
 		//----ui elements
 		this.radioGroup_latexMode = this._createModeInput(); 
-		this.latexRender          = new LatexRenderView(this.locale);
+		this.latexRender          = new LatexRenderView(engine, this.locale);
 		this.bottomPanel    = new HorizontalPanel(this.locale.t, [this.radioGroup_latexMode]);
 		
 		//----A collection of views which can be focused in the form.
