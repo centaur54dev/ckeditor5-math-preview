@@ -27,7 +27,7 @@ export default class MathPreviewhUI extends Plugin {
 		let   engine = 'mathjax'
 		const config = editor.config.get(( 'MathPreview' ))
 		if (typeof config !== 'undefined'){
-			engine = this._safeGet(config.engine, 'mathjax');
+			engine = this._safeGet(config.engine, engine);
 		}
 
 

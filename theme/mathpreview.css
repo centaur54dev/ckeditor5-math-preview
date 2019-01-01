@@ -5,5 +5,8 @@
 
  .ck .ck-mathpreview-popup{
      padding:0.5em;
-     vertical-align:initial;
  }
+
+ .ck .ck-mathpreview-popup *{
+    vertical-align:initial;
+}

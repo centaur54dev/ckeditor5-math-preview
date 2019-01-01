@@ -1,7 +1,8 @@
 # ckeditor5-math-preview
 ## About
-This is a plugin for [ckeditor 5](https://github.com/ckeditor/ckeditor5). When clicking on a latex math expression, a popup is shown that displays the expression rendered with MathJax. 
+This is a plugin for [ckeditor 5](https://github.com/ckeditor/ckeditor5). When clicking on a latex math expression, a popup is shown that displays the expression rendered with MathJax or katex. 
 
+UPDATE: katex rendering added
 UPDATE: working with ckeditor5 version 11.2.0 (ckeditor5-engine v.12.0).
 
 ## Install
@@ -41,14 +42,22 @@ export default class ClassicEditor extends ClassicEditorBase {}
 				...
 			    ]
 		},
+	},
 
-        ...OTHER OPTIONS
-	}
+	MathPreview = {
+		//configuration options for the math-preview plugin
+		engine: 'mathjax'	//or 'katex'
+	},
+
+
+	...OTHER OPTIONS
 };
 ```
+*Note: the `MathPreview` configuration is optional. If not defined the rendering defaults to MathJax.*
+
 
 ## Use
 A toolbar button is added, which functions as an on/off switch for the plugin functionality. Type some math formulas in latex in the editor using either the `\[ \]` or the  `\( \)` markers, e.g. `\[x^2+\frac{1}{x}=0\]`. When clicking anywhere in the formula, a popup appears and the formula is rendered using MathJax. The rendering updates itself on formula modification, on the fly. 
 
 
-The plugin expects MathJax to be loaded and configured. 
+The plugin expects MathJax or katex to be loaded and configured. 
