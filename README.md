@@ -16,7 +16,7 @@ To load the plugin, configure ckeditor (e.g. edit file `ckeditor.js`) like this:
 
 #### Import plugin
 ```
-import CustomElement from 'ckeditor5-math-preview/src/mathpreview';
+import MathpreviewPlugin from 'ckeditor5-math-preview/src/mathpreview';
 ```
 
 
