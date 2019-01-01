@@ -31,13 +31,13 @@ export default class LatexRenderView extends View {
 	}
 
 	updateMath(){
-		if (engine=='mathjax'){
+		if (this.engine=='mathjax'){
 			if(this.mode==="inline") this.element.innerHTML = "\\(" + this.value + "\\)";
 			else 					 this.element.innerHTML = "\\[" + this.value + "\\]";
 			MathJax.Hub.Queue(['Typeset', MathJax.Hub, this.element], function () {
 			});
 		}
-		else if (engine=='katex'){
+		else if (this.engine=='katex'){
 			katex.render(this.value, this.element, {
 				displayMode: this.mode==='display',
 				throwOnError: false
