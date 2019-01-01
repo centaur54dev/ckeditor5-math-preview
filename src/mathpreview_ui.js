@@ -204,7 +204,7 @@ export default class MathPreviewhUI extends Plugin {
 	}
 
 
-	safeGet(input, safeDefault){
+	_safeGet(input, safeDefault){
 		if( typeof input !== 'undefined' &&  (input || input===false || input===0) ){
 			return input;
 		}
