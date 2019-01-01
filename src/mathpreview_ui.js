@@ -24,8 +24,11 @@ export default class MathPreviewhUI extends Plugin {
 
 	init() {
 		const editor = this.editor;
+		let   engine = 'mathjax'
 		const config = editor.config.get(( 'MathPreview' ))
-		const engine = this._safeGet(config.engine, 'mathjax');
+		if (typeof config !== 'undefined'){
+			engine = this._safeGet(config.engine, 'mathjax');
+		}
 
 
 		editor.editing.view.addObserver( ClickObserver );
