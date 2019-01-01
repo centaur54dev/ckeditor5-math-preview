@@ -1,7 +1,7 @@
 {
   "name": "ckeditor5-math-preview",
   "version": "1.0.0",
-  "description": "When clicking on a latex math expression, a popup is shown that displays the expression rendered with MathJax ",
+  "description": "When clicking on a latex math expression, a popup is shown that displays the expression rendered with MathJax or KaTeX",
   "main": "mathpreview.js",
   "homepage": "https://github.com/centaur54dev/ckeditor5-math-preview#readme",
   "repository": {
@@ -19,7 +19,8 @@
     "math",
     "equation",
     "preview",
-    "mathjax"
+    "mathjax",
+    "katex"
   ],
   "author": "centaur54dev",
   "license": "MIT"
