@@ -1,4 +1,5 @@
 # ckeditor5-math-preview
+[![npm version](https://badge.fury.io/js/ckeditor5-math-preview.svg)](https://badge.fury.io/js/ckeditor5-math-preview)
 [![Dependency Status](https://david-dm.org/centaur54dev/ckeditor5-math-preview/status.svg)](https://david-dm.org/centaur54dev/ckeditor5-math-preview)
 [![devDependency Status](https://david-dm.org/centaur54dev/ckeditor5-math-preview/dev-status.svg)](https://david-dm.org/centaur54dev/ckeditor5-math-preview?type=dev)
 
