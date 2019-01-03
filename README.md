@@ -1,4 +1,7 @@
 # ckeditor5-math-preview
+[![Dependency Status](https://david-dm.org/centaur54dev/ckeditor5-math-preview/status.svg)](https://david-dm.org/centaur54dev/ckeditor5-math-preview)
+[![devDependency Status](https://david-dm.org/centaur54dev/ckeditor5-math-preview/dev-status.svg)](https://david-dm.org/centaur54dev/ckeditor5-math-preview?type=dev)
+
 ## About
 This is a plugin for [ckeditor 5](https://github.com/ckeditor/ckeditor5). When clicking on a latex math expression, a popup is shown that displays the expression rendered with MathJax or KaTeX. 
 
