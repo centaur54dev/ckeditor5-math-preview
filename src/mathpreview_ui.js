@@ -198,7 +198,7 @@ export default class MathPreviewhUI extends Plugin {
 	
 	_getSelectedMath() {
 		const selection = this.editor.editing.view.document.selection;
-
+		//const selection =  this.editor.editing.view.createSelection( this.editor.editing.view.document.selection );
 		if ( selection.isCollapsed ) {
 			return Utils.getMath( selection.getFirstPosition(), this.editor.editing.view );
 		} else {
