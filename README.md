@@ -8,7 +8,7 @@ This is a plugin for [ckeditor 5](https://github.com/ckeditor/ckeditor5). When c
 
 UPDATE: KaTeX rendering added.
 
-UPDATE: working with ckeditor5 version 12.1 (ckeditor5-engine v.13.1.0).
+UPDATE: working with ckeditor5 version 12.2.
 
 ## Install
 Install using NPM: 

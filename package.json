@@ -9,9 +9,9 @@
     "url": "git+https://github.com/centaur54dev/ckeditor5-math-preview"
   },
   "dependencies": {
-    "@ckeditor/ckeditor5-core": "^12.1.0",
-    "@ckeditor/ckeditor5-engine": "^13.1.0",
-    "@ckeditor/ckeditor5-ui": "^12.1.0"
+    "@ckeditor/ckeditor5-core": "^12.1.1",
+    "@ckeditor/ckeditor5-engine": "^13.1.1",
+    "@ckeditor/ckeditor5-ui": "^13.0.0"
   },
   "keywords": [
     "ckeditor5",
