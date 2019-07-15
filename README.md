@@ -32,27 +32,27 @@ Assuming that the build is based on Classic Editor:
 ```
 export default class ClassicEditor extends ClassicEditorBase {}
 
-	// Plugins to include in the build.
-	ClassicEditor.builtinPlugins = [
-		...
-		MathpreviewPlugin,
-		...
-	],
+// Plugins to include in the build.
+ClassicEditor.builtinPlugins = [
+	...
+	MathpreviewPlugin,
+	...
+],
 
-	ClassicEditor.defaultConfig = {
-		toolbar: {
-			items: [
-				...
-				'mathpreview',
-				...
-			    ]
-		},
+ClassicEditor.defaultConfig = {
+	toolbar: {
+		items: [
+			...
+			'mathpreview',
+			...
+			]
 	},
 
-	MathPreview = {
+	MathPreview : {
 		//configuration options for the math-preview plugin
 		engine: 'mathjax' //or 'katex'
 	},
+
 
 
 	...OTHER OPTIONS
