@@ -10,6 +10,10 @@ UPDATE: KaTeX rendering added.
 
 UPDATE: working with ckeditor5 version 12.2.
 
+## Demo
+Check this fiddle: 
+[https://jsfiddle.net/centaur54dev/ra7qcLzb/](https://jsfiddle.net/centaur54dev/ra7qcLzb/)
+
 ## Install
 Install using NPM: 
 
