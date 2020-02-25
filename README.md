@@ -7,7 +7,6 @@
 This is a plugin for [ckeditor 5](https://github.com/ckeditor/ckeditor5). When clicking on a latex math expression, a popup is shown that displays the expression rendered with MathJax or KaTeX. 
 
 
-UPDATE: working with ckeditor5 version 16.0.
 
 ## Demo
 Check this fiddle: 
